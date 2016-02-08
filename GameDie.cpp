@@ -15,8 +15,10 @@ int GameDie::roll()
 	int randNumber = 0;
 	int maxNumber = 20;
 	int minNumber = 4;
+	int limit = 0;
 	srand(time(NULL));
-  randNumber = rand()%(maxNumber - minNumber +1) + minNumber; //generates number between Min Number and Max Number 
-	//cout << "Random Number is :"<< randNumber<<endl;
+  limit = rand()%(maxNumber - minNumber + 1) + minNumber; //generates number between Min Number and Max Number
+	randNumber = rand()%limit+1;
+	cout << "Random Number is :"<< limit<<endl;
 return randNumber;
 }
